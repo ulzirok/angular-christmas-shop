@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'styles/variables';
+@import 'styles/mixins';
+@import 'styles/fonts';
+
+
+.container {
+  max-width: 1276px;
+  width: 100%;
+  margin: 0 auto;
+  
+  @include respond(tablet) {
+    max-width: $tablet;
+  }
+  
+  @include respond(mobile) {
+    max-width: $mobile;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--color-white);
+  color: #000;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}

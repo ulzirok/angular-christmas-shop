@@ -11,7 +11,7 @@
         "love": "+200",
         "dream": "+400"
       },
-      "image": "images/gift1.png"
+      "image": "src/assets/images/gift1.png"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
         "love": "+100",
         "dream": "+200"
       },
-      "image": "images/gift2.png"
+      "image": "src/assets/images/gift2.png"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
         "love": "+200",
         "dream": "+300"
       },
-      "image": "images/gift3.png"
+      "image": "src/assets/images/gift3.png"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
         "love": "+300",
         "dream": "+500"
       },
-      "image": "images/gift4.png"
+      "image": "src/assets/images/gift4.png"
     },
     {
       "id": 5,
@@ -63,7 +63,7 @@
         "love": "+175",
         "dream": "+325"
       },
-      "image": "images/gift1.png"
+      "image": "src/assets/images/gift1.png"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
         "love": "+180",
         "dream": "+340"
       },
-      "image": "images/gift2.png"
+      "image": "src/assets/images/gift2.png"
     },
     {
       "id": 7,
@@ -89,7 +89,7 @@
         "love": "+185",
         "dream": "+355"
       },
-      "image": "images/gift3.png"
+      "image": "src/assets/images/gift3.png"
     },
     {
       "id": 8,
@@ -102,7 +102,7 @@
         "love": "+190",
         "dream": "+370"
       },
-      "image": "images/gift4.png"
+      "image": "src/assets/images/gift4.png"
     },
     {
       "id": 9,
@@ -115,7 +115,7 @@
         "love": "+195",
         "dream": "+385"
       },
-      "image": "images/gift1.png"
+      "image": "src/assets/images/gift1.png"
     },
     {
       "id": 10,
@@ -128,7 +128,7 @@
         "love": "+200",
         "dream": "+400"
       },
-      "image": "images/gift2.png"
+      "image": "src/assets/images/gift2.png"
     },
     {
       "id": 11,
@@ -141,7 +141,7 @@
         "love": "+205",
         "dream": "+415"
       },
-      "image": "images/gift3.png"
+      "image": "src/assets/images/gift3.png"
     },
     {
       "id": 12,
@@ -154,7 +154,7 @@
         "love": "+210",
         "dream": "+430"
       },
-      "image": "images/gift4.png"
+      "image": "src/assets/images/gift4.png"
     },
     {
       "id": 13,
@@ -167,7 +167,7 @@
         "love": "+215",
         "dream": "+445"
       },
-      "image": "images/gift1.png"
+      "image": "src/assets/images/gift1.png"
     },
     {
       "id": 14,
@@ -180,7 +180,7 @@
         "love": "+220",
         "dream": "+460"
       },
-      "image": "images/gift2.png"
+      "image": "src/assets/images/gift2.png"
     },
     {
       "id": 15,
@@ -193,7 +193,7 @@
         "love": "+225",
         "dream": "+475"
       },
-      "image": "images/gift3.png"
+      "image": "src/assets/images/gift3.png"
     },
     {
       "id": 16,
@@ -206,7 +206,7 @@
         "love": "+230",
         "dream": "+490"
       },
-      "image": "images/gift4.png"
+      "image": "src/assets/images/gift4.png"
     },
     {
       "id": 17,
@@ -219,7 +219,7 @@
         "love": "+235",
         "dream": "+505"
       },
-      "image": "images/gift1.png"
+      "image": "src/assets/images/gift1.png"
     },
     {
       "id": 18,
@@ -232,7 +232,7 @@
         "love": "+240",
         "dream": "+520"
       },
-      "image": "images/gift2.png"
+      "image": "src/assets/images/gift2.png"
     },
     {
       "id": 19,
@@ -245,7 +245,7 @@
         "love": "+245",
         "dream": "+535"
       },
-      "image": "images/gift3.png"
+      "image": "src/assets/images/gift3.png"
     },
     {
       "id": 20,
@@ -258,7 +258,7 @@
         "love": "+250",
         "dream": "+550"
       },
-      "image": "images/gift4.png"
+      "image": "src/assets/images/gift4.png"
     }
   ]
 }

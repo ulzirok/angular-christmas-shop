@@ -1,0 +1,71 @@
+.about {
+  font-family: Montserrat, sans-serif;
+  color: var(--color-dark-blue);
+  background: url('../../../../assets/images/bg-snow-slider-giftPreview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-red);
+  padding: 60px 82px;
+  
+  &__inner {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__left {
+    width: 658px;
+    height: 528px;
+    padding: 100px 152px 100px 60px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    margin-right: -20px;
+    
+    &-inner {
+      width: 426px;
+      height: 328px;
+    }
+  }
+  
+  &__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.52;
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  &__subtitle {
+    color: var(--color-red);
+    font-family: Allura, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 1;
+  }
+  
+  &__text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.48;
+    letter-spacing: 0;
+  }
+  
+  &__right {
+    width: 658px;
+    height: 528px;
+    border-radius: 20px;
+    margin-left: -20px;
+  }
+  
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+  }
+}

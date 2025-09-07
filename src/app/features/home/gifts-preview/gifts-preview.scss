@@ -1,0 +1,37 @@
+.gifts-preview {
+  font-family: Montserrat, sans-serif;
+  color: var(--color-white);
+  text-align: center;
+  background: url('../../../../assets/images/bg-snow-slider-giftPreview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-red);
+
+  &__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.52;
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+  }
+
+  &__subtitle {
+    font-family: Allura, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  
+  &__cards {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

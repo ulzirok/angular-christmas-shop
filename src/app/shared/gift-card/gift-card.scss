@@ -1,5 +1,14 @@
 .gift-card {
   text-transform: uppercase;
+  transform: scale(1);
+  transition: 0.3s;
+  border-radius: 20px;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
   
   &__top {
     width: 310px;

@@ -1,14 +1,27 @@
+@import 'mixins';
+
 .footer {
   font-family: Montserrat, sans-serif;
   color: var(--color-dark-blue);
   text-align: center;
   background-color: var(--color-white);
   padding: 60px 82px;
+  
+  @include _1200-block {
+    padding: 60px 8px;
+  }
 
   &__contacts {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     gap: 12px;
     padding-bottom: 60px;
+    
+    @include _768-block {
+      flex-wrap: wrap;
+    }
+    
   }
   
   &__card {
@@ -26,6 +39,10 @@
     justify-content: center;
     align-items: center;
     gap: 12px 0;
+    
+    @include _768-block {
+      width: 100%;
+    }
   }
   
   &__number {
@@ -71,6 +88,10 @@
     font-weight: 400;
     line-height: 1.48;
     letter-spacing: 0;
+    
+    @include _420-block {
+      font-size: 14px;
+    }
   }
   
   &__made {
@@ -80,6 +101,10 @@
     line-height: 1;
     letter-spacing: 1.2px;
     transition: 0.3s;
+    
+    @include _420-block {
+      font-size: 20px;
+    }
     
     &:hover {
       color: var(--color-red);

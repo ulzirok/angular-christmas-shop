@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .category-switcher {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,10 @@
   padding-bottom: 20px;
   background-color: var(--color-red);
   color: var(--color-white);
+  
+  @include _420-block {
+    padding: 0 12px;
+  }
 
   &__list {
     width: 474px;
@@ -25,6 +31,11 @@
     background-color: var(--color-red);
     border-radius: 20px;
     transition: 0.3s;
+    
+    @include _420-block {
+        padding: 12px 8px;
+      }
+    
 
     &:hover {
       background-color: var(--color-white);

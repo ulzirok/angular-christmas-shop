@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .menu {
   // outline: 1px solid red;
   display: flex;
@@ -9,6 +11,10 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--color-dark-blue);
+  
+  @include _768-block {
+    font-size: 12px;
+  }
   
   &__logo {
     display: flex;

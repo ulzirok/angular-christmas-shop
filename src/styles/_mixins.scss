@@ -1,24 +1,25 @@
-$desktop: 1276px;
-$tablet: 752px;
-$mobile: 364px;
-
-
-@mixin respond($breakpoint) {
-  @if $breakpoint ==desktop {
-    @media (max-width: #{$desktop}) {
-      @content;
-    }
+@mixin _1024-block{
+  @media (max-width: 1024px){
+    @content;
   }
-
-  @else if $breakpoint ==tablet {
-    @media (max-width: #{$tablet}) {
-      @content;
-    }
+}
+@mixin _1200-block{
+  @media (max-width: 1200px){
+    @content;
   }
-
-  @else if $breakpoint ==mobile {
-    @media (max-width: #{$mobile}) {
-      @content;
-    }
+}
+@mixin _768-block{
+  @media (max-width: 768px){
+    @content;
+  }
+}
+@mixin _576-block{
+  @media (max-width: 576px){
+    @content;
+  }
+}
+@mixin _420-block{
+  @media (max-width: 420px){
+    @content;
   }
 }

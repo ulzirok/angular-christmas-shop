@@ -9,11 +9,11 @@
   width: 100%;
   margin: 0 auto;
   
-  @include respond(tablet) {
-    max-width: $tablet;
+  @include _768-block {
+    max-width: 768px;
   }
-  @include respond(mobile) {
-    max-width: $mobile;
+  @include _420-block {
+    max-width: 380px;
   }
 }
 

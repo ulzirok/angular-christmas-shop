@@ -1,6 +1,7 @@
 .gifts-list {
   background-color: var(--color-red);
   padding-bottom: 60px;
+  padding-top: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   
@@ -8,7 +9,7 @@
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;

@@ -1,0 +1,16 @@
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px;
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-red);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  // display: none;
+}
+
+.scrollTop:hover {
+  background-color: var(--color-white);
+}

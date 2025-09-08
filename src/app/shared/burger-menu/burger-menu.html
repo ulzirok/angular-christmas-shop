@@ -1,1 +1,14 @@
-<p>burger-menu works!</p>
+<div (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu__btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu">
+  <ul class="burger-menu__list">
+    <li class="burger-menu__item"><a routerLink="">Home</a></li>
+    <li class="burger-menu__item"><a routerLink="" fragment="about">About</a></li>
+    <li class="burger-menu__item"><a routerLink="gifts">Gifts</a></li>
+    <li class="burger-menu__item"><a routerLink="" fragment="footer-contacts">Contacts</a></li>
+  </ul>
+</div>

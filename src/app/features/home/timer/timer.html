@@ -10,7 +10,22 @@
         <h2 class="timer__subtitle">The New Year is Coming Soon...</h2>
         
         <div class="timer__container">
-          ТАЙМЕР
+          <div class="time">
+            <h2 class="days">{{days}}</h2>
+            <small>days</small>
+          </div>
+          <div class="time">
+            <h2 class="hours">{{hours < 10 ? '0' + hours : hours}}</h2>
+            <small>hours</small>
+          </div>
+          <div class="time">
+            <h2 class="minutes">{{minutes < 10 ? '0' + minutes : minutes}}</h2>
+            <small>minutes</small>
+          </div>
+          <div class="time">
+            <h2 class="seconds">{{seconds < 10 ? '0' + seconds : seconds}}</h2>
+            <small>seconds</small>
+          </div>
         </div>
         
       </div>

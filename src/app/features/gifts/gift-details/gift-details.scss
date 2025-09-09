@@ -1,0 +1,127 @@
+@import 'mixins';
+
+.gift-details {
+  
+  &__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    // visibility: hidden;
+    // opacity: 0;
+    transition: opacity .4s, visibility .4s;
+    
+    // &.open {
+    //   visibility: visible;
+    //   opacity: 1;
+    // }
+    
+    // &.open .modal__box {
+    //   transform: scale(1)
+    // }
+  }
+  
+  
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  &__modal {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    border-radius: 20px;
+    // transform: scale(0);
+    transition: transform .8s;
+  }
+  
+  &__top {
+    width: 400px;
+    background-color: var(--color-content-bg);
+    border-radius: 20px;
+    margin-bottom: -35px;
+  }
+  
+  &__bottom {
+    font-family: Montserrat, sans-serif;
+    text-align: start;
+    width: 400px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    margin-top: -35px;
+    padding: 20px 20px 44px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+  
+  &__category {
+    color: var(--color-blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.3;
+  }
+  
+  &__name {
+    color: var(--color-dark-blue);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.28px;
+    line-height: 1.52;
+  }
+  
+  &__description {
+    text-transform: capitalize;
+    color: var(--color-dark-blue);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.48;
+    margin-bottom: 20px;
+  }
+  
+  &__superpowers {
+    color: var(--color--dark-blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+  
+  &__superpower {
+    text-transform: capitalize;
+    color: var(--color-dark-blue);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.48;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__superpower-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__snow {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+}

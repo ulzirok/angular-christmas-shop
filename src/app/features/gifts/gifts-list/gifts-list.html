@@ -2,19 +2,10 @@
   <div class="container">
     <div class="gifts-list__inner">
       <div class="gifts-list__cards">
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
-        <app-gift-card>4 СЛУЧАЙНЫХ ПОДАРКА</app-gift-card>
+        <app-gift-card *ngFor="let gift of gifts" [gift]="gift"></app-gift-card>
       </div>
     </div>
   </div>
 </section>
+
+<app-gift-details></app-gift-details>

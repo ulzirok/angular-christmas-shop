@@ -1,9 +1,9 @@
 <div class="gift-card">
   <div class="gift-card__top">
-    <img src="../../../assets/images/gift1.png" alt="" class="gift-card__img">
+    <img [src]="gift?.image" alt="" class="gift-card__img">
   </div>
   <div class="gift-card__bottom">
-    <p class="gift-card__category">For work</p>
-    <p class="gift-card__name">Console.log Guru</p>
+    <p [ngClass]="gift?.categoryName" class="gift-card__category">{{gift?.category}}</p>
+    <p class="gift-card__name">{{gift?.name}}</p>
   </div>
 </div>

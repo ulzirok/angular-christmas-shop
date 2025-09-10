@@ -35,7 +35,7 @@
   }
   
   &__category {
-    color: var(--color-blue);
+    // color: var(--color-blue);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.6px;
@@ -49,4 +49,14 @@
     letter-spacing: 1.28px;
     line-height: 1.52;
   }
+}
+
+.work {
+  color: var(--color-blue);
+}
+.health {
+  color: var(--color-green);
+}
+.harmony {
+  color: var(--color-pink);
 }

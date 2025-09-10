@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './gift-details.scss'
 })
 export class GiftDetails {
-
+  isModalOpen: boolean = false
+  
+  toggleModal() {
+    this.isModalOpen = !this.isModalOpen
+  }
 }

@@ -1,264 +1,472 @@
 {
   "gifts": [
     {
-      "id": 1,
       "name": "Bug Magnet",
       "description": "Able to find bugs in code like they were placed there on purpose.",
       "category": "For Work",
+      "categoryName": "work",
       "superpowers": {
         "live": "+500",
         "create": "+500",
         "love": "+200",
         "dream": "+400"
       },
-      "image": "src/assets/images/gift1.png"
+      "image": "assets/images/gift1.png"
     },
     {
-      "id": 2,
       "name": "Console.log Guru",
-      "description": "Masters the art of debugging with console.log statements.",
-      "category": "For Fun",
+      "description": "Uses console.log like a crystal ball to find any issue.",
+      "category": "For Work",
+      "categoryName": "work",
       "superpowers": {
-        "live": "+200",
-        "create": "+300",
-        "love": "+100",
+        "live": "+500",
+        "create": "+500",
+        "love": "+200",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Shortcut Cheater",
+      "description": "Knows every keyboard shortcut like they were born with them.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+500",
+        "love": "+400",
         "dream": "+200"
       },
-      "image": "src/assets/images/gift2.png"
+      "image": "assets/images/gift1.png"
     },
     {
-      "id": 3,
-      "name": "Shortcut Cheater",
-      "description": "Knows every keyboard shortcut in existence.",
-      "category": "For Learning",
+      "name": "Merge Master",
+      "description": "Merges branches in Git without conflicts, like a wizard during an exam.",
+      "category": "For Work",
+      "categoryName": "work",
       "superpowers": {
-        "live": "+300",
+        "live": "+200",
+        "create": "+500",
+        "love": "+200",
+        "dream": "+300"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Async Tamer",
+      "description": "Handles asynchronous code and promises like well-trained pets.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+100",
         "create": "+400",
         "love": "+200",
         "dream": "+300"
       },
-      "image": "src/assets/images/gift3.png"
+      "image": "assets/images/gift1.png"
     },
     {
-      "id": 4,
-      "name": "Regex Master",
-      "description": "Can write regex in their sleep.",
+      "name": "CSS Tamer",
+      "description": "Can make Flexbox and Grid work together like they were always best friends.",
       "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+200",
+        "create": "+500",
+        "love": "+200",
+        "dream": "+300"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Time Hacker",
+      "description": "Writes code at the last moment but always meets the deadline.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+500",
+        "love": "+500",
+        "dream": "+200"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Layout Master",
+      "description": "Creates perfect layouts on the first try, like they can read the designer's mind.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+300",
+        "love": "+200",
+        "dream": "+200"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Documentation Whisperer",
+      "description": "Understands cryptic documentation as if they wrote it themselves.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+500",
+        "love": "+200",
+        "dream": "+100"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Feedback Master",
+      "description": "Accepts client revisions with the Zen calm of Buddha.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+300",
+        "create": "+500",
+        "love": "+300",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Code Minimalist",
+      "description": "Writes code so concise that one line does more than a whole file.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+500",
+        "love": "+500",
+        "dream": "+200"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Pixel-Perfect Magician",
+      "description": "Aligns elements to the last pixel, even when the design looks abstract.",
+      "category": "For Work",
+      "categoryName": "work",
+      "superpowers": {
+        "live": "+500",
+        "create": "+500",
+        "love": "+400",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift1.png"
+    },
+    {
+      "name": "Posture Levitation",
+      "description": "Can sit for hours, but maintains perfect posture like a ballerina.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
         "live": "+400",
         "create": "+500",
-        "love": "+300",
+        "love": "+500",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift2.png"
+    },
+    {
+      "name": "Step Master",
+      "description": "Gets 10,000 steps a day even while sitting at the computer.",
+      "category": "For Health",
+      "categoryName": "health",
+      "superpowers": {
+        "live": "+400",
+        "create": "+300",
+        "love": "+500",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift2.png"
+    },
+    {
+      "name": "Snack Resister",
+      "description": "Ignoring desktop snacks like a strict dietician.",
+      "category": "For Health",
+      "categoryName": "health",
+      "superpowers": {
+        "live": "+400",
+        "create": "+100",
+        "love": "+200",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift2.png"
+    },
+    {
+      "name": "Hydration Bot",
+      "description": "Drinks the recommended 2 liters of water a day like a health-programmed robot.",
+      "category": "For Health",
+      "categoryName": "health",
+      "superpowers": {
+        "live": "+500",
+        "create": "+300",
+        "love": "+500",
         "dream": "+500"
       },
-      "image": "src/assets/images/gift4.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 5,
-      "name": "Gift 5",
-      "description": "Description for gift 5",
-      "category": "For Fun",
+      "name": "Sleep Overlord",
+      "description": "Sleeps 6 hours but feels like they had 10.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+150",
-        "create": "+250",
-        "love": "+175",
-        "dream": "+325"
+        "live": "+400",
+        "create": "+500",
+        "love": "+500",
+        "dream": "+500"
       },
-      "image": "src/assets/images/gift1.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 6,
-      "name": "Gift 6",
-      "description": "Description for gift 6",
-      "category": "For Learning",
+      "name": "Break Guru",
+      "description": "Takes a stretch break every hour without forgetting, no matter how focused.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+160",
-        "create": "+260",
-        "love": "+180",
-        "dream": "+340"
+        "live": "+300",
+        "create": "+300",
+        "love": "+300",
+        "dream": "+400"
       },
-      "image": "src/assets/images/gift2.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 7,
-      "name": "Gift 7",
-      "description": "Description for gift 7",
-      "category": "For Relax",
+      "name": "Eye Protector",
+      "description": "Can work all day at the monitor without feeling like their eyes are on fire.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+170",
-        "create": "+270",
-        "love": "+185",
-        "dream": "+355"
+        "live": "+100",
+        "create": "+300",
+        "love": "+500",
+        "dream": "+400"
       },
-      "image": "src/assets/images/gift3.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 8,
-      "name": "Gift 8",
-      "description": "Description for gift 8",
-      "category": "For Work",
+      "name": "Stress Dodger",
+      "description": "Masters meditation right at the keyboard.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+180",
-        "create": "+280",
-        "love": "+190",
-        "dream": "+370"
+        "live": "+100",
+        "create": "+400",
+        "love": "+200",
+        "dream": "+400"
       },
-      "image": "src/assets/images/gift4.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 9,
-      "name": "Gift 9",
-      "description": "Description for gift 9",
-      "category": "For Fun",
+      "name": "Yoga Coder",
+      "description": "Easily switches from coding to yoga and back.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+190",
-        "create": "+290",
-        "love": "+195",
-        "dream": "+385"
+        "live": "+400",
+        "create": "+400",
+        "love": "+400",
+        "dream": "+400"
       },
-      "image": "src/assets/images/gift1.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 10,
-      "name": "Gift 10",
-      "description": "Description for gift 10",
-      "category": "For Learning",
+      "name": "Healthy Snacker",
+      "description": "Always picks fruit, even when chocolate is within arm’s reach.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+200",
+        "live": "+400",
         "create": "+300",
         "love": "+200",
         "dream": "+400"
       },
-      "image": "src/assets/images/gift2.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 11,
-      "name": "Gift 11",
-      "description": "Description for gift 11",
-      "category": "For Relax",
+      "name": "Chair Exerciser",
+      "description": "Manages to work out without leaving the chair.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+210",
-        "create": "+310",
-        "love": "+205",
-        "dream": "+415"
+        "live": "+500",
+        "create": "+500",
+        "love": "+500",
+        "dream": "+400"
       },
-      "image": "src/assets/images/gift3.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 12,
-      "name": "Gift 12",
-      "description": "Description for gift 12",
-      "category": "For Work",
+      "name": "Caffeine Filter",
+      "description": "Drinks coffee at night and still falls asleep with no problem.",
+      "category": "For Health",
+      "categoryName": "health",
       "superpowers": {
-        "live": "+220",
-        "create": "+320",
-        "love": "+210",
-        "dream": "+430"
+        "live": "+400",
+        "create": "+300",
+        "love": "+500",
+        "dream": "+200"
       },
-      "image": "src/assets/images/gift4.png"
+      "image": "assets/images/gift2.png"
     },
     {
-      "id": 13,
-      "name": "Gift 13",
-      "description": "Description for gift 13",
-      "category": "For Fun",
+      "name": "Joy Charger",
+      "description": "Finds joy in the little things—even in a build that finishes unexpectedly fast.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
       "superpowers": {
-        "live": "+230",
-        "create": "+330",
-        "love": "+215",
-        "dream": "+445"
+        "live": "+200",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+500"
       },
-      "image": "src/assets/images/gift1.png"
+      "image": "assets/images/gift4.png"
     },
     {
-      "id": 14,
-      "name": "Gift 14",
-      "description": "Description for gift 14",
-      "category": "For Learning",
-      "superpowers": {
-        "live": "+240",
-        "create": "+340",
-        "love": "+220",
-        "dream": "+460"
-      },
-      "image": "src/assets/images/gift2.png"
-    },
-    {
-      "id": 15,
-      "name": "Gift 15",
-      "description": "Description for gift 15",
-      "category": "For Relax",
-      "superpowers": {
-        "live": "+250",
-        "create": "+350",
-        "love": "+225",
-        "dream": "+475"
-      },
-      "image": "src/assets/images/gift3.png"
-    },
-    {
-      "id": 16,
-      "name": "Gift 16",
-      "description": "Description for gift 16",
-      "category": "For Work",
-      "superpowers": {
-        "live": "+260",
-        "create": "+360",
-        "love": "+230",
-        "dream": "+490"
-      },
-      "image": "src/assets/images/gift4.png"
-    },
-    {
-      "id": 17,
-      "name": "Gift 17",
-      "description": "Description for gift 17",
-      "category": "For Fun",
-      "superpowers": {
-        "live": "+270",
-        "create": "+370",
-        "love": "+235",
-        "dream": "+505"
-      },
-      "image": "src/assets/images/gift1.png"
-    },
-    {
-      "id": 18,
-      "name": "Gift 18",
-      "description": "Description for gift 18",
-      "category": "For Learning",
-      "superpowers": {
-        "live": "+280",
-        "create": "+380",
-        "love": "+240",
-        "dream": "+520"
-      },
-      "image": "src/assets/images/gift2.png"
-    },
-    {
-      "id": 19,
-      "name": "Gift 19",
-      "description": "Description for gift 19",
-      "category": "For Relax",
-      "superpowers": {
-        "live": "+290",
-        "create": "+390",
-        "love": "+245",
-        "dream": "+535"
-      },
-      "image": "src/assets/images/gift3.png"
-    },
-    {
-      "id": 20,
-      "name": "Gift 20",
-      "description": "Description for gift 20",
-      "category": "For Work",
+      "name": "Error Laugher",
+      "description": "Laughs at code errors like they’re jokes instead of getting angry.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
       "superpowers": {
         "live": "+300",
-        "create": "+400",
-        "love": "+250",
-        "dream": "+550"
+        "create": "+200",
+        "love": "+500",
+        "dream": "+500"
       },
-      "image": "src/assets/images/gift4.png"
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Bug Acceptance Guru",
+      "description": "Accepts bugs as part of the journey to perfection — it’s just another task.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Spontaneous Coding Philosopher",
+      "description": "Philosophically accepts any client suggestion after a long refactor.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+400"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Deadline Sage",
+      "description": "Remains zen even when the deadline is close and the project manager is stressed.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+200",
+        "create": "+200",
+        "love": "+300",
+        "dream": "+500"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Inspiration Maestro",
+      "description": "Finds inspiration on an empty screen as if masterpieces are already there.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+400",
+        "dream": "+100"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Peace Keeper",
+      "description": "Maintains inner calm even in moments of intense crisis.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+200",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+500"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Empathy Guru",
+      "description": "Feels the team’s mood and can lift everyone’s spirits.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+500",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+500"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Laughter Generator",
+      "description": "Can lighten any tense situation with a joke that even bugs laugh at.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+200",
+        "dream": "+500"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Pause Master",
+      "description": "Knows when to just step back from the keyboard and breathe.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+100",
+        "dream": "+100"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Coder Healer",
+      "description": "Can support a colleague in their darkest hour, even if it’s a 500 error.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+500",
+        "dream": "+500"
+      },
+      "image": "assets/images/gift4.png"
+    },
+    {
+      "name": "Music Code Curator",
+      "description": "Creates work playlists so good, even deadlines follow the rhythm.",
+      "category": "For Harmony",
+      "categoryName": "harmony",
+      "superpowers": {
+        "live": "+300",
+        "create": "+200",
+        "love": "+300",
+        "dream": "+200"
+      },
+      "image": "assets/images/gift4.png"
     }
   ]
 }

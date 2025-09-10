@@ -13,11 +13,24 @@ import { GiftsService } from '../../../services/gifts-service';
 })
 export class GiftsList implements OnInit {
   gifts: IGift[] = []
+  isModalOpen: boolean = false
+  selectedGift: any = null
   
-  constructor(private giftsService: GiftsService) {  }
+  constructor(private giftsService: GiftsService) { }
+  
+  openModal(gift: any) { //gift - то, что эмитнуто в методе дочки (выбранный объект gift)
+    this.selectedGift = gift 
+    this.isModalOpen = true
+  }
+  
+  closeModal() {
+    this.isModalOpen = false
+    this.selectedGift = null
+  }
+
   
   ngOnInit(): void {
-    this.giftsService.getAll().subscribe((gifts) => {
+    this.giftsService.getRandom(12).subscribe((gifts) => {
       this.gifts = gifts
       
     })

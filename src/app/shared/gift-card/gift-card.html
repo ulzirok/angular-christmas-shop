@@ -1,4 +1,4 @@
-<div class="gift-card">
+<div (click)="selected()" class="gift-card"> <!-- слушаем событие(click), при клике вызовем метод selected() -->
   <div class="gift-card__top">
     <img [src]="gift?.image" alt="" class="gift-card__img">
   </div>

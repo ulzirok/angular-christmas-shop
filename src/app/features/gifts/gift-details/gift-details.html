@@ -1,7 +1,7 @@
-<div class="gift-details__bg">
+<div [class.active]="gift" class="gift-details__bg">
   <div class="gift-details__container">
     <div class="gift-details__modal">
-      <button class="gift-details__btn">
+      <button (click)="closed()" class="gift-details__btn"> <!-- слушаем событие(click), при клике вызовем метод closed() -->
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-castom">
           <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2" stroke-linecap="round" />
           <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2" stroke-linecap="round" />
@@ -10,12 +10,12 @@
       
       
       <div class="gift-details__top">
-        <img src="../../../assets/images/gift1.png" alt="gift" class="gift-details__img">
+        <img [src]="gift?.image" [alt]="gift?.name" class="gift-details__img">
       </div>
       <div class="gift-details__bottom">
-        <p class="gift-details__category">For work</p>
-        <p class="gift-details__name">Console.log Guru</p>
-        <p class="gift-details__description">Uses console.log like a crystal ball to find any issue.</p>
+        <p [ngClass]="gift?.categoryName" class="gift-details__category">{{gift?.category}}</p>
+        <p class="gift-details__name">{{gift?.name}}</p>
+        <p class="gift-details__description">{{gift?.description}}</p>
         <p class="gift-details__superpowers">Adds superpowers to:</p>
         <div class="gift-details__superpower-container">
           <div class="gift-details__superpower gift-details__superpower-name">
@@ -25,10 +25,10 @@
             <p>Dream</p>
           </div>
           <div class="gift-details__superpower gift-details__superpower-number">
-            <p>+500</p>
-            <p>+500</p>
-            <p>+500</p>
-            <p>+500</p>
+            <p>{{gift?.superpowers?.live}}</p>
+            <p>{{gift?.superpowers?.create}}</p>
+            <p>{{gift?.superpowers?.love}}</p>
+            <p>{{gift?.superpowers?.dream}}</p>
           </div>
         </div>
         

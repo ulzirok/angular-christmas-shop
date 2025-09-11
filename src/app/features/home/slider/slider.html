@@ -4,14 +4,24 @@
       <h3 class="slider__subtitle">Become Happier!</h3>
       <h2 class="slider__title">in the new 2025</h2>
       
-      <div class="slider__container">
-        <div class="slider__container-inner"></div>
+      <div #containerEl class="slider__container">
+        <div #innerEl [style.left.px]="move" class="slider__container-inner">
+          @for (slide of slides; track $index) {
+            @if (slide.type === 'text') {
+              <h2 #slideEl class="slider__container-title">{{slide.content}}</h2>
+            }
+            @else {
+              <img #slideEl [src]="slide.content" [alt]="slide.type" class="slider__container-img">
+            }
+          }
+        </div>
       </div>
       
       <div class="slider__buttons">
-        <div class="slider__btn prev material-icons">arrow_back</div>
-        <div class="slider__btn next material-icons">arrow_forward</div>
+        <button (click)="slideToPrev()" (mouseenter)="stopAutoplay()" (mouseleave)="startAutoplay()" class="slider__btn prev material-icons">arrow_back</button>
+        <button (click)="slideToNext()" (mouseenter)="stopAutoplay()" (mouseleave)="startAutoplay()" class="slider__btn next material-icons">arrow_forward</button>
       </div>
+      
     </div>
   </div>
 </section>

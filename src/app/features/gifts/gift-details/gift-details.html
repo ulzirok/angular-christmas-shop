@@ -1,4 +1,4 @@
-<div [class.active]="gift" class="gift-details__bg">
+<div [class.active]="gift" class="gift-details__bg"> <!-- если true добавляем класс active (это можно также писать через *ngIf, [ngClass] или [hidden]) -->
   <div class="gift-details__container">
     <div class="gift-details__modal">
       <button (click)="closed()" class="gift-details__btn"> <!-- слушаем событие(click), при клике вызовем метод closed() -->

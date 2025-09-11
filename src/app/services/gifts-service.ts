@@ -7,7 +7,7 @@ import { IGift } from '../models/gift-model';
   providedIn: 'root'
 })
 export class GiftsService {
-  url: string = 'http://localhost:3001/gifts'
+  url: string = 'http://localhost:3000/gifts'
   
   constructor(private http: HttpClient) {}
   

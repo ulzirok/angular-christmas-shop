@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .search-bar {
   background-color: var(--color-red);
   
@@ -7,6 +9,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
+    @include _420-block {
+      justify-content: center;
+    }
   }
   &__input {
     width: 380px;
@@ -16,6 +22,9 @@
     padding: 8px 10px;
     outline: none;
     
+    @include _420-block {
+      width: 350px;
+    }
     
     &-wrapper {
       position: relative;

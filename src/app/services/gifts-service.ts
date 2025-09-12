@@ -2,12 +2,14 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IGift } from '../models/gift-model';
+import { GIFT_CATEGORIES } from '../shared/constants/gift-categories';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GiftsService {
   url: string = 'http://localhost:3000/gifts'
+  categories = GIFT_CATEGORIES
   
   constructor(private http: HttpClient) {}
   
@@ -30,4 +32,18 @@ export class GiftsService {
       .map(({ value }) => value)
   }
   
+  getFiltered(count: number, category?: string): Observable<IGift[]> {
+    return this.http.get<IGift[]>(this.url).pipe(
+      map((gifts: IGift[]) => {
+        if (category === 'all') {
+          return gifts;
+        }
+        return gifts.filter(gift => gift.categoryName === category);
+      }),
+      map((gifts: IGift[]) => this.shuffleArray(gifts))
+    )
+  }
+  
+  
 }
+

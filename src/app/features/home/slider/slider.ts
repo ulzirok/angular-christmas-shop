@@ -26,7 +26,7 @@ export class Slider implements OnInit, OnDestroy, AfterViewInit{
     { type: 'text', content: 'love'},
     { type: 'image', content: 'assets/images/christmas-tree-ball.png'},
     { type: 'text', content: 'dream'},
-    { type: 'image', content: 'assets/images/fairytale-house.png'}
+    { type: 'image', content: 'assets/images/fairytale-house.png'},
   ];
   
   slideToNext() {

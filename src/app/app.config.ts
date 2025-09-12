@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled',           
       })
     ),
-    provideHttpClient()
+    provideHttpClient(),
+    
   ]
 };

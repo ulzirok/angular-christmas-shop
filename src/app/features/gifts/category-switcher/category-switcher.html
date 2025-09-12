@@ -1,16 +1,6 @@
 <div class="category-switcher">
   <ul class="category-switcher__list">
-    <a href="#">
-      <li class="category-switcher__item">All</li>
-    </a>
-    <a href="#">
-      <li class="category-switcher__item">for work</li>
-    </a>
-    <a href="#">
-      <li class="category-switcher__item">for health</li>
-    </a>
-    <a href="#">
-      <li class="category-switcher__item">for harmony</li>
-    </a>
+    <li (click)="selectedCategory(category.key)" *ngFor="let category of categories | keyvalue" class="category-switcher__item">{{category.value}}</li>
   </ul>
 </div>
+

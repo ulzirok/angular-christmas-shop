@@ -4,12 +4,18 @@
 Рождественские праздники уже не за горами! Пора покупать подарки... но где?
 Пора создать уютное место для покупки интересных подарков!
 
+## Ссылка: [https://ulzirok.github.io/angular-online-shop/](https://ulzirok.github.io/angular-christmas-shop/)
+
+---
+
 ## Используемые технологии
 - **Angular 20** (Standalone Components, Router, HttpClient)  
 - **TypeScript**  
 - **SCSS (модульные стили)**  
 - **json-server** (имитация бэкенда)  
 - **GitHub Pages** (деплой)
+  
+---
 
 ## Реализовано
 
@@ -30,8 +36,7 @@
 - Работа с mock-сервером (`db.json` через **json-server**)  
 - Структурированное разделение компонентов  
   - `Hero`, `About`, `Slider`, `GiftsPreview`, `Timer` и др.
-
-## Ссылка: [https://ulzirok.github.io/angular-online-shop/](https://ulzirok.github.io/angular-christmas-shop/)
+---
 
 ## Установка и запуск
 
@@ -52,4 +57,5 @@ ng serve
 npx json-server db.json
 
 Приложение будет доступно по адресу: http://localhost:4200
+
 

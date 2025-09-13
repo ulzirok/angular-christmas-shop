@@ -40,10 +40,10 @@
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/ulzirok/angular-online-shop.git
+git clone https://github.com/ulzirok/angular-christmas-shop.git
 
 # Перейти в папку проекта
-cd angular-online-shop
+cd angular-christmas-shop
 
 # Установить зависимости
 npm install

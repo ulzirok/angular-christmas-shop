@@ -10,7 +10,7 @@
     justify-content: flex-end;
     align-items: center;
     
-    @include _420-block {
+    @include _576-block {
       justify-content: center;
     }
   }
@@ -22,8 +22,8 @@
     padding: 8px 10px;
     outline: none;
     
-    @include _420-block {
-      width: 350px;
+    @include _576-block {
+      width: 100%;
     }
     
     &-wrapper {

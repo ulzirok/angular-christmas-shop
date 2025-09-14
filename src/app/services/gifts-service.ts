@@ -8,7 +8,7 @@ import { GIFT_CATEGORIES } from '../shared/constants/gift-categories';
   providedIn: 'root'
 })
 export class GiftsService {
-  url: string = 'http://localhost:3000/gifts'
+  url: string = 'https://my-json-server.typicode.com/ulzirok/christmas-shop-db/gifts'
   categories = GIFT_CATEGORIES
   
   constructor(private http: HttpClient) {}

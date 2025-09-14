@@ -4,7 +4,7 @@
 Новогодние праздники уже не за горами! Пора покупать подарки... но где?
 Пора создать уютное место для покупки интересных подарков!
 
-## Ссылка: [https://ulzirok.github.io/angular-online-shop/](https://ulzirok.github.io/angular-christmas-shop/)
+## Ссылка: https://ulzirok.github.io/angular-christmas-shop/
 
 ## Используемые технологии
 - **Angular 20** (Standalone Components, Router, HttpClient)  
@@ -52,6 +52,7 @@ npm install
 ng serve
 
 Приложение будет доступно по адресу: http://localhost:4200
+
 
 
 

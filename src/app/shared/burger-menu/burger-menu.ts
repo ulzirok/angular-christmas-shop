@@ -14,5 +14,12 @@ export class BurgerMenu {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen
+    
+    if (this.isMenuOpen) {
+      document.body.classList.add('lock')
+    }
+    else {
+      document.body.classList.remove('lock')
+    }
   }
 }

@@ -40,7 +40,7 @@
 
 ```bash
 # Клонировать репозиторий
-git clone [https://github.com/ulzirok/angular-christmas-shop.git](https://github.com/ulzirok/angular-christmas-shop.git)
+git clone https://github.com/ulzirok/angular-christmas-shop.git
 
 # Перейти в папку проекта
 cd angular-christmas-shop
@@ -51,10 +51,8 @@ npm install
 # Запустить приложение
 ng serve
 
-# Запустить json-server (в отдельном терминале)
-npx json-server db.json
-
 Приложение будет доступно по адресу: http://localhost:4200
+
 
 
 

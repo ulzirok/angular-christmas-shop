@@ -5,7 +5,6 @@
   transform: scale(1);
   transition: 0.3s;
   border-radius: 20px;
-  cursor: pointer;
   
   &:hover {
     transform: scale(1.02);
@@ -28,14 +27,13 @@
     background-color: var(--color-white);
     border-radius: 20px;
     margin-top: -35px;
-    padding: 20px 20px 44px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 8px 0;
   }
   
   &__category {
-    // color: var(--color-blue);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.6px;
@@ -44,11 +42,43 @@
   
   &__name {
     color: var(--color-dark-blue);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.28px;
     line-height: 1.52;
   }
+  
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  &__btn {
+    width: 47%;
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 15px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  
+    &:hover {
+      background-color: var(--color-red);
+      color: var(--color-white);
+    }
+  }
+  
+  
 }
 
 .work {

@@ -1,10 +1,12 @@
 <app-category-switcher (selectCategory)="selectedCategory($event)"></app-category-switcher>
-<app-search-bar (searchChange)="searchTerm = $event"></app-search-bar>
+<div>
+  <app-search-bar (searchChange)="searchTerm = $event"></app-search-bar>
+</div>
 <section id="gifts-list" class="gifts-list">
   <div class="container">
     <div class="gifts-list__inner">
       <div class="gifts-list__cards">
-        <app-gift-card *ngFor="let gift of gifts | filterGiftsPipe: searchTerm" [gift]="gift" (select)="openModal($event)"></app-gift-card> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(select), когда придет событие вызовем у родителя метод openModal() и передаем через $event то, что эмитнуто (объект gift) -->
+        <app-gift-card *ngFor="let gift of gifts | filterGiftsPipe: searchTerm" [gift]="gift" (select)="openModal($event)" (addToCart)="addToCart($event)"></app-gift-card> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(select), когда придет событие вызовем у родителя метод openModal() и передаем через $event то, что эмитнуто (объект gift) -->
       </div>
     </div>
   </div>

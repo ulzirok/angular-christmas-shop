@@ -11,8 +11,14 @@ import { CommonModule } from '@angular/common';
 export class GiftCard {
   @Input() gift?: IGift; //Получили объект gift от родителя и сохранили в переменную gift
   
-  @Output() select = new EventEmitter<IGift>()  //Через @Output(передает польз.событие дочки родителю) создаем св-во select, его значение - экз класса EventEmitter
+  @Output() select = new EventEmitter<IGift>();  //Через @Output(передает польз.событие дочки родителю) создаем св-во select, его значение - экз класса EventEmitter
+  @Output() addToCart = new EventEmitter<IGift>()
+  
   selected() {
     this.select.emit(this.gift); //при клике передаем полученный объект gift родителю через метод emit ('эмитим объект)
+  }
+  
+  addedToCart() {
+    this.addToCart.emit(this.gift)
   }
 }

@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CartIcon } from '../../cart/cart-icon/cart-icon';
 
 @Component({
   selector: 'app-search-bar',
-  imports: [FormsModule],
+  imports: [FormsModule, CartIcon],
   templateUrl: './search-bar.html',
   styleUrl: './search-bar.scss'
 })

@@ -7,6 +7,7 @@ import { GiftsService } from '../../../services/gifts-service';
 import { CategorySwitcher } from '../category-switcher/category-switcher';
 import { SearchBar } from '../search-bar/search-bar';
 import { FilterGiftsPipePipe } from '../../../pipes/filter-gifts-pipe-pipe';
+import { CartService } from '../../../services/cart-service';
 
 @Component({
   selector: 'app-gifts-list',
@@ -20,13 +21,16 @@ export class GiftsList implements OnInit {
   selectedGift: any = null
   searchTerm: any = ''
   
-  constructor(private giftsService: GiftsService) { }
+  constructor(
+    private giftsService: GiftsService,
+    private cartService: CartService
+  ) { }
   
   selectedCategory(category: string) {
     this.giftsService.getFiltered(12, category).subscribe(filteredGifts => this.gifts = filteredGifts);
   }
   
-  openModal(gift: any) { //gift - то, что эмитнуто в методе дочки (выбранный объект gift)
+  openModal(gift: IGift) { //gift - то, что эмитнуто в методе дочки (выбранный объект gift)
     this.selectedGift = gift 
     this.isModalOpen = true
   }
@@ -36,6 +40,9 @@ export class GiftsList implements OnInit {
     this.selectedGift = null
   }
 
+  addToCart(gift: IGift) {
+    this.cartService.addItem(gift)
+  }
   
   ngOnInit(): void {
     this.giftsService.getRandom(12).subscribe((gifts) => {

@@ -1,17 +1,33 @@
 <div class="contact-form">
   <div class="container">
     <div class="contact-form__inner">
-      <form class="contact-form__form">
+      <form [formGroup]="form" (submit)="onSubmit()" class="contact-form__form">
         <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Ваше имя" />
+        <input formControlName="name" type="text" id="name" placeholder="Name" />
+        @if(form.get('name')?.errors?.['required'] && form.get('name')?.touched) {
+          <p class="error">Please, enter your name!</p>
+        }
       
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Ваш email" />
+        <input formControlName="email" type="email" id="email" placeholder="Email" />
+        @if(form.get('email')?.errors?.['required'] && form.get('email')?.touched) {
+          <p class="error">Please, enter your email!</p>
+        }
+        @else if(form.get('email')?.errors?.['email'] && form.get('email')?.touched) {
+          <p class="error">Please, enter a valid email!</p>
+        }
       
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Ваше сообщение"></textarea>
-      
-        <button class="contact-form__btn" type="submit">Submit</button>
+        <textarea formControlName="message" id="message" placeholder="Message"></textarea>
+        @if(form.get('message')?.errors?.['minlength'] && form.get('message')?.touched) {
+          <p class="error">Please, enter your message!</p>
+        }
+        @else if(form.get('message')?.errors?.['required'] && form.get('message')?.touched) {
+          <p class="error">The message should be at least 10 characters long!</p>
+        }
+        
+        <button [disabled]="form.invalid" class="contact-form__btn" type="submit">Submit</button>
+        
       </form>
     </div>
   </div>

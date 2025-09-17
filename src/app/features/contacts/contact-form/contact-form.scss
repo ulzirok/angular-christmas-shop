@@ -6,7 +6,7 @@
   
   label {
       text-align: start;
-      color: var(--color-red);
+      color: var(--color-dark-blue);
       font-family: Allura, sans-serif;
       font-size: 24px;
       font-weight: 400;
@@ -69,10 +69,10 @@
     height: 100px;
     }
   
-  input:focus,
-  textarea:focus {
-    border: 1px solid var(--color-green);
-    }
+  // input:focus,
+  // textarea:focus {
+  //   border: 1px solid var(--color-green);
+  //   }
   
   label {
     display: block;
@@ -106,3 +106,22 @@
       }
     }
 }
+
+.error {
+  color: var(--color-red);
+  text-align: start;
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid var(--color-red) !important;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border: 2px solid var(--color-green) !important;
+}
+
+

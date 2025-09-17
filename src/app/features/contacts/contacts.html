@@ -1,10 +1,13 @@
 <section class="contacts">
+  @if(success) {
+    <div class="success-msg">Your message was sent successfully!</div>
+  }
   <div class="contacts__bg">
     <div class="container">
       <div class="contacts__inner">
         <h1 class="contacts__title">Write to us</h1>
         
-        <app-contact-form></app-contact-form>
+        <app-contact-form (submittedSuccess)="onFormSubmitted()"></app-contact-form>
         
         <div class="contacts__bottom">
           <div class="contacts__info">

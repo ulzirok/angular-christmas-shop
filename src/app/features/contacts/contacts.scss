@@ -85,3 +85,26 @@ iframe {
   height: auto;
   width: 100%;
 }
+
+.success-msg {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #d4edda;
+  color: var(--color-green);
+  border: 1px solid #c3e6cb;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

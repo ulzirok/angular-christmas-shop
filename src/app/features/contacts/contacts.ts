@@ -8,5 +8,11 @@ import { ContactForm } from './contact-form/contact-form';
   styleUrl: './contacts.scss'
 })
 export class Contacts {
-
+  success: boolean = false
+  
+  onFormSubmitted() {
+    this.success = true
+    
+    setTimeout(() => this.success = false, 2500)
+  }
 }

@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    @include _420-block {
+    @include _576-block {
       padding: 90px 0;
     }
   }

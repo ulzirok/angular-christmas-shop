@@ -87,6 +87,9 @@ iframe {
 }
 
 .success-msg {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   margin-top: 1rem;
   padding: 1rem;
   background: #d4edda;

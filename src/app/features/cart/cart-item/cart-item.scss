@@ -1,0 +1,108 @@
+@import 'mixins';
+
+.cart-item {
+  width: 100%;
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  &__img-wrapper {
+    background-color: var(--color-content-bg);
+    border-radius: 20px;
+    max-width: 110px;
+    width: 100%;
+    
+    img {
+      width: 100%;
+    }
+  }
+  
+  &__right {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    
+    @include _576-block {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    font-family: Montserrat, sans-serif;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.3;
+  }
+
+  &__buttons {
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  &__btn {
+    width: 40%;
+    padding: 7px 14px;
+    border-radius: 17px;
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    @include _576-block {
+      padding: 6px 10px;
+    }
+  }
+  
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  &__price {
+    color: var(--color-green);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    
+    @include _576-block {
+      font-size: 18px;
+    }
+  }
+  
+}
+
+.work {
+  color: var(--color-blue);
+}
+
+.health {
+  color: var(--color-green);
+}
+
+.harmony {
+  color: var(--color-pink);
+}

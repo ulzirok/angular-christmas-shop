@@ -8,12 +8,18 @@
     'opsz' 24;
   font-size: 24px;
   color: var(--color-white);
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-light-gray);
   border-radius: 17px;
   padding: 7px 10px;
   background: transparent;
   margin-right: 15px;
   cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s;
+  
+  &:hover {
+    border: 1px solid var(--color-white);
+  }
 }
 
 .count {

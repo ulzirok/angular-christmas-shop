@@ -2,19 +2,19 @@
   
   <div class="cart-item__right">
     <div class="cart-item__img-wrapper">
-      <img src="../../../../assets/images/gift1.png" alt="" class="cart-item__img">
+      <img [src]="item.image" alt="" class="cart-item__img">
     </div>
-    <p class="cart-item__name">Bug Magnet</p>
+    <p class="cart-item__name">{{item.name}}</p>
   </div>
   
   <div class="cart-item__left">
     <div class="cart-item__price">
-      <span>250 $</span>
+      <span> {{item.price | currency }} </span>
     </div>
       <div class="cart-item__buttons">
-        <button class="cart-item__btn">-</button>
-        <span class="cart-item__count">2</span>
-        <button class="cart-item__btn">+</button>
+        <button (click)="onDecrease()" class="cart-item__btn">-</button>
+        <span class="cart-item__count">{{item.quantity}}</span>
+        <button (click)="onIncrease()" class="cart-item__btn">+</button>
       </div>
   </div>
   

@@ -6,10 +6,10 @@
   <div class="container">
     <div class="gifts-list__inner">
       <div class="gifts-list__cards">
-        <app-gift-card *ngFor="let gift of gifts | filterGiftsPipe: searchTerm" [gift]="gift" (select)="openModal($event)" (addToCart)="addToCart($event)"></app-gift-card> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(select), когда придет событие вызовем у родителя метод openModal() и передаем через $event то, что эмитнуто (объект gift) -->
+        <app-gift-card [showButtons]="true" *ngFor="let gift of gifts | filterGiftsPipe: searchTerm" [gift]="gift" (select)="openModal($event)" (addToCart)="addToCart($event)"></app-gift-card> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(select), когда придет событие вызовем у родителя метод openModal() и передаем через $event то, что эмитнуто (объект gift) -->
       </div>
     </div>
   </div>
 </section>
 
-<app-gift-details [gift]="selectedGift" (close)="closeModal()"></app-gift-details> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(close), когда придет событие вызовем у родителя метод closeModal() --> 
+<app-gift-details [gift]="selectedGift" (close)="closeModal()"  (addToCart)="addToCart($event)" [quantity]="getQuantity(selectedGift?.id)" (increase)="increaseQuantity($event)" (decrease)="decreaseQuantity($event)"></app-gift-details> <!-- 1.Передаем selectedGift дочке [gift] 2.Cлушаем польз.событие дочки(close), когда придет событие вызовем у родителя метод closeModal() --> 

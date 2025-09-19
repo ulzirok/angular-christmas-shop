@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gift-card.scss'
 })
 export class GiftCard {
+  @Input() showButtons: boolean = true
+  
   @Input() gift?: IGift; //Получили объект gift от родителя и сохранили в переменную gift
   
   @Output() select = new EventEmitter<IGift>();  //Через @Output(передает польз.событие дочки родителю) создаем св-во select, его значение - экз класса EventEmitter

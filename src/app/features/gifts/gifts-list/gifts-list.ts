@@ -8,6 +8,7 @@ import { CategorySwitcher } from '../category-switcher/category-switcher';
 import { SearchBar } from '../search-bar/search-bar';
 import { FilterGiftsPipePipe } from '../../../pipes/filter-gifts-pipe-pipe';
 import { CartService } from '../../../services/cart-service';
+import { ICartItem } from '../../../models/cart-item-model';
 
 @Component({
   selector: 'app-gifts-list',
@@ -18,8 +19,10 @@ import { CartService } from '../../../services/cart-service';
 export class GiftsList implements OnInit {
   gifts: IGift[] = []
   isModalOpen: boolean = false
-  selectedGift: any = null
+  selectedGift: IGift | undefined;
   searchTerm: any = ''
+  
+  items: ICartItem[] = []
   
   constructor(
     private giftsService: GiftsService,
@@ -37,17 +40,42 @@ export class GiftsList implements OnInit {
   
   closeModal() {
     this.isModalOpen = false
-    this.selectedGift = null
+    this.selectedGift = undefined
   }
 
   addToCart(gift: IGift) {
     this.cartService.addItem(gift)
   }
   
+  increaseQuantity(gift: IGift) {
+    const item = this.items.find((item) => item.id === gift.id)
+    if (item) {
+      this.cartService.increaseQuantity(item.id);
+    } else {
+      this.cartService.addItem(gift)
+    }
+  }
+  
+  decreaseQuantity(gift: IGift) {
+    const item = this.items.find((item) => item.id === gift.id)
+    if (item) {
+      this.cartService.decreaseQuantity(item.id)
+    }
+  }
+  
+  getQuantity(id: number | undefined): number {
+    if (!id) return 0
+    const item = this.items.find((item) => item.id === id)
+    return item ? item.quantity : 0
+  }
+  
   ngOnInit(): void {
     this.giftsService.getRandom(12).subscribe((gifts) => {
       this.gifts = gifts
       
+      this.cartService.cartItems$.subscribe((cartItems) => {
+        this.items = cartItems;
+      })
     })
   }
 }

@@ -5,7 +5,7 @@
   <div class="gift-card__bottom">
     <p [ngClass]="gift?.categoryName" class="gift-card__category">{{gift?.category}}</p>
     <p class="gift-card__name">{{gift?.name}}</p>
-    <div class="gift-card__buttons">
+    <div class="gift-card__buttons" *ngIf="showButtons">
       <button (click)="selected()" class="gift-card__btn">View details</button> <!-- слушаем событие(click), при клике вызовем метод selected() -->
       <button (click)="addedToCart()" class="gift-card__btn">Add to cart</button>
     </div>

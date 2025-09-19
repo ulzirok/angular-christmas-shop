@@ -1,12 +1,14 @@
 <div class="search-bar">
   <div class="container">
     <div class="search-bar__inner">
-      <app-cart-icon></app-cart-icon>
+      
       <div class="search-bar__input-wrapper">
         <span class="material-icons search-bar__input-icon">search</span>
         <input [(ngModel)]="searchTerm" (input)="onInput($event)" type="text" class="search-bar__input"
           placeholder="Search by keywords...">
       </div>
+      
+      <app-cart-icon></app-cart-icon>
     </div>
   </div>
 </div>

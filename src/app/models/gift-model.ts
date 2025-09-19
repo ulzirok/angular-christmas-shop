@@ -4,6 +4,7 @@ export interface IGift {
   description: string,
   category: string,
   categoryName: string,
+  price: number,
   superpowers: {
     live: string,
     create: string,

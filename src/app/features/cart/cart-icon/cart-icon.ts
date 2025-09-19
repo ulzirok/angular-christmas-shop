@@ -15,6 +15,9 @@ export class CartIcon {
   constructor(private cartService: CartService) {
     this.cartService.cartCount$.subscribe(value => {
       this.count = value;
+      
+      console.log(this.count);
+      
     });
   }
 }

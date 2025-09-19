@@ -1,6 +1,7 @@
 @import 'mixins';
 
 .gift-details {
+  z-index: 3000;
   
   &__bg {
     position: fixed;
@@ -22,9 +23,7 @@
       visibility: visible;
       opacity: 1;
     }
-    
   }
-  
   
   &__btn {
     position: absolute;
@@ -67,14 +66,14 @@
     background-color: var(--color-white);
     border-radius: 20px;
     margin-top: -35px;
-    padding: 20px 20px 44px 20px;
+    padding: 10px 20px 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px 0;
+    gap: 7px 0;
     
     @include _1200-block {
       width: 350px;
-      padding: 20px;
+      padding: 10px 20px 20px 20px;
     }
     
     @include _420-block {
@@ -109,14 +108,14 @@
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.48;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     
     @include _1200-block {
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
     
-     @include _768-block {
-          font-size: 14px;
+    @include _768-block {
+      font-size: 14px;
     }
   }
   
@@ -131,7 +130,7 @@
   &__superpower {
     text-transform: capitalize;
     color: var(--color-dark-blue);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.48;
@@ -149,11 +148,65 @@
     align-items: center;
   }
   
-  &__snow {
+  &__buttons-cart {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 5px;
   }
   
+    &__btn-cart {
+      width: 60%;
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-red);
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      padding: 12px;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      
+      @include _576-block {
+        font-size: 12px;
+      }
+  
+      &:hover {
+        background-color: var(--color-green);
+      }
+    }
+    
+    &__buttons-count {
+      width: 35%;
+      color: var(--color-white);
+      background-color: var(--color-dark-blue);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      line-height: 1.2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      padding: 10px;
+    }
+        
+  &__btn-count {
+    width: 30%;
+    color: var(--color-white);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+        
 }
 
 .gift-details__bg.active .gift-details__modal {

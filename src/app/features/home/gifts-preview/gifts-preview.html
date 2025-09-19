@@ -5,7 +5,7 @@
       <h2 class="gifts-preview__title">especially for you</h2>
 
       <div class="gifts-preview__cards">
-        <app-gift-card *ngFor="let gift of gifts" [gift]="gift"></app-gift-card>
+        <app-gift-card [showButtons]="false" *ngFor="let gift of gifts" [gift]="gift"></app-gift-card>
       </div>
       
     </div>

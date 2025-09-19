@@ -7,25 +7,55 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  private gifts: ICartItem[] = []
+  private gifts: ICartItem[] = []; //создаем массив, чтобы добавлять товары
   
-  private cartCountSubject = new BehaviorSubject<number>(0)
-  cartCount$ = this.cartCountSubject.asObservable()
+  private cartItemsSubject = new BehaviorSubject<ICartItem[]>([]); //создаем массив (поток) cartItemsSubject, чтобы получить массив с актуальными данными (товарами)
+  cartItems$ = this.cartItemsSubject.asObservable() 
+  
+  private cartCountSubject = new BehaviorSubject<number>(0) //создаем переменную (поток) cartCountSubject, чтобы получить актуальное кол-во quantity
+  cartCount$ = this.cartCountSubject.asObservable() //сохраняем его значение в переменную, чтобы на него подписываться и получить это значение (в иконке Корзины)
   
   addItem(addedGift: IGift) {
-    const existingGift = this.gifts.find((gift) => gift.id === addedGift.id)
+    const existingGift = this.gifts.find((gift) => gift.id === addedGift.id) //проверяем в массиве gifts есть ли этот только что добавленный товар
     
-    if (existingGift) {
-      existingGift.quantity++
+    if (existingGift) { //если такой товар уже есть в массиве
+      existingGift.quantity++ //кол-во товара увеличиваем
     } else {
-      this.gifts.push({ ...addedGift, quantity: 1 })
+      this.gifts.push({ ...addedGift, quantity: 1 }); //иначе, выбранный товар добавляем в массив gifts
     }
-    
-    const totalCount = this.gifts.reduce((acc, item) => acc + item.quantity, 0);
-    this.cartCountSubject.next(totalCount);
-    
-    console.log(this.gifts);
-    
+    this.updateCart()
   }
+  
+  increaseQuantity(id: number):void {
+    const increasingGift = this.gifts.find((item) => item.id === id);
+
+    if (increasingGift) {
+      increasingGift.quantity++;
+      this.updateCart()
+    }
+  }
+  
+  decreaseQuantity(id: number): void {
+    const decreasingGift = this.gifts.find((item) => item.id === id)
+    
+    if (decreasingGift) {
+      
+      if (decreasingGift.quantity > 1) {
+        decreasingGift.quantity--
+      } else {
+        this.gifts = this.gifts.filter((item) => item.id !== id)
+      }
+      this.updateCart() 
+    }
+  }
+  
+  updateCart() {
+    const totalCount = this.gifts.reduce((acc, gift) => acc + gift.quantity, 0); //находим общее кол-во всех товаров
+    this.cartCountSubject.next(totalCount); //записываем актуальное общее кол-во в переменную (поток), чтобы отобразить в иконке
+    this.cartItemsSubject.next([...this.gifts]); //записываем массив gifts в массив cartItemsSubject (поток), чтобы потом брать товары с актуальными quantity
+    console.log(this.cartCountSubject);
+  }
+  
+
   
 }

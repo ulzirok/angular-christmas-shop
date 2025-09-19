@@ -2,10 +2,7 @@
   <div class="container">
     <div class="cart-list__inner">
       <div class="cart-list__items">
-        <app-cart-item></app-cart-item>
-        <app-cart-item></app-cart-item>
-        <app-cart-item></app-cart-item>
-        <app-cart-item></app-cart-item>
+        <app-cart-item *ngFor="let item of items" [item]="item" (increase)="increaseQuantity(item)" (decrease)="decreaseQuantity(item)"></app-cart-item>
       </div>
       
       

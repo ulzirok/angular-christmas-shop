@@ -32,14 +32,21 @@
           </div>
         </div>
         
-        <div class="gift-details__snow">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
-          <img src="assets/snowflake.svg" alt="snowflake">
+        <div class="gift-details__buttons-cart">
+          
+          <div class="gift-details__buttons-count">
+            <button (click)="onDecrease()" class="gift-details__btn-count">-</button>
+            <span class="gift-details__count">{{quantity}}</span>
+            <button (click)="onIncrease()" class="gift-details__btn-count">+</button>
+          </div>
+           
+          <button *ngIf="quantity === 0" (click)="onAddToCart()" class="gift-details__btn-cart">
+            Add to cart
+          </button>
+          <button *ngIf="quantity > 0" routerLink="/cart" class="gift-details__btn-cart">
+            Go to cart
+          </button>
+          
         </div>
       </div>
     </div>

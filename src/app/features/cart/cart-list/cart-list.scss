@@ -3,7 +3,7 @@
 .cart-list {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background: url('../../../../assets/images/bg-ball-hero.png');
+  background: url('../../../../assets/images/bg-snow-slider-giftPreview.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,13 +11,17 @@
   padding: 60px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  
+  @include _576-block {
+    padding: 30px 10px;
+  }
 
   &__inner {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    background-color: var(--color-light-gray);
+    // background-color: var(--color-light-gray);
     padding: 20px;
     border-radius: 20px;
     
@@ -40,8 +44,8 @@
   }
   
   &__summary {
-    background-color: var(--color-light-gray);
-    border-radius: 20px;
+    // background-color: var(--color-light-gray);
+    // border-radius: 20px;
     width: 34%;
     
     @include _768-block {

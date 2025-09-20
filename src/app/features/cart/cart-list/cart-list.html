@@ -1,15 +1,29 @@
+@if(success) {
+<div class="success-msg">Your order has been successfully placed!</div>
+}
+
 <section class="cart-list">
   <div class="container">
-    <div class="cart-list__inner">
-      <div class="cart-list__items">
-        <app-cart-item *ngFor="let item of items" [item]="item" (increase)="increaseQuantity(item)" (decrease)="decreaseQuantity(item)"></app-cart-item>
-      </div>
-      
-      
-      <div class="cart-list__summary">
-        <app-cart-summary></app-cart-summary>
-      </div>
+    @if(items.length === 0) {
+    <div class="cart-list__empty">
+      <p class="cart-list__text">cart is empty!</p>
+      <button routerLink="/gifts" class="cart-list__btn">Go to shopping</button>
     </div>
+    }
+    
+    @if(items.length > 0) {
+      <div class="cart-list__inner">
+        <div class="cart-list__items">
+          <app-cart-item *ngFor="let item of items" [item]="item" (increase)="increaseQuantity(item)"
+            (decrease)="decreaseQuantity(item)"></app-cart-item>
+        </div>
+      
+        <div class="cart-list__summary">
+          <app-cart-summary (submittedSuccess)="onFormSubmitted()" [total]="total"></app-cart-summary>
+        </div>
+      </div>
+    }
+    
   </div>
 </section>
 

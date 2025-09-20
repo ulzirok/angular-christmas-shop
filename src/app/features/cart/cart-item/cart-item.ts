@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output, Pipe } from '@angular/core';
 import { IGift } from '../../../models/gift-model';
 import { ICartItem } from '../../../models/cart-item-model';
-import { CurrencyPipe } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cart-item',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, CommonModule],
   templateUrl: './cart-item.html',
   styleUrl: './cart-item.scss'
 })

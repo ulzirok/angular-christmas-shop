@@ -4,12 +4,18 @@
     <div class="cart-item__img-wrapper">
       <img [src]="item.image" alt="" class="cart-item__img">
     </div>
-    <p class="cart-item__name">{{item.name}}</p>
+    <div class="cart-item__text">
+      <p class="cart-item__name">{{item.name}}</p>
+      <p [ngClass]="item.categoryName" class="cart-item__category">{{item.category}}</p>
+    </div>
   </div>
   
   <div class="cart-item__left">
-    <div class="cart-item__price">
+    <div class="cart-item__price"> Price:
       <span> {{item.price | currency }} </span>
+    </div>
+    <div class="cart-item__subtotal">
+      <span> {{item.price * item.quantity | currency}} </span>
     </div>
       <div class="cart-item__buttons">
         <button (click)="onDecrease()" class="cart-item__btn">-</button>

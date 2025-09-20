@@ -9,6 +9,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './cart-summary.scss'
 })
 export class CartSummary {
+  submitted: boolean = false
   
   @Input() total!: number
   phone: string = ''
@@ -19,6 +20,7 @@ export class CartSummary {
     if (form.valid) {
       this.submittedSuccess.emit();
       
+      this.submitted = true
       this.phone = '';
       form.resetForm()
     }

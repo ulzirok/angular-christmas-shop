@@ -45,12 +45,23 @@
     font-weight: 600;
     letter-spacing: 0.6px;
     line-height: 1.3;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+  
+  &__category {
+    color: var(--color-blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    line-height: 1.3;
+    text-align: start;
   }
 
   &__buttons {
     color: var(--color-white);
     background-color: var(--color-dark-blue);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.6px;
     line-height: 1.2;
@@ -58,11 +69,12 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+    gap: 24px;
   }
 
   &__btn {
     width: 40%;
-    padding: 7px 14px;
+    padding: 10px 14px;
     border-radius: 17px;
     color: var(--color-white);
     background-color: var(--color-dark-blue);
@@ -71,7 +83,7 @@
     cursor: pointer;
     
     @include _576-block {
-      padding: 6px 10px;
+      padding: 7px 10px;
     }
   }
   
@@ -81,16 +93,26 @@
     align-items: end;
   }
   
-  &__price {
-    color: var(--color-green);
-    font-size: 20px;
+  &__price, &__subtotal {
+    color: var(--color-dark-blue);
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.6px;
     line-height: 1.2;
     
+    span {
+      margin-left: 10px;
+    }
+    
     @include _576-block {
       font-size: 18px;
     }
+  }
+  
+  &__subtotal {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--color-blue);
   }
   
 }

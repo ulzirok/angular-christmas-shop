@@ -12,12 +12,11 @@ export class CartService {
   private cartItemsSubject = new BehaviorSubject<ICartItem[]>([]); //создаем массив (поток) cartItemsSubject, чтобы получить массив с актуальными данными (товарами)
   cartItems$ = this.cartItemsSubject.asObservable() 
   
-  private cartCountSubject = new BehaviorSubject<number>(0) //создаем переменную (поток) cartCountSubject, чтобы получить актуальное кол-во quantity
+  private cartCountSubject = new BehaviorSubject<number>(0) //создаем переменную (поток) cartCountSubject, чтобы получить актуальное общее кол-во quantity
   cartCount$ = this.cartCountSubject.asObservable() //сохраняем его значение в переменную, чтобы на него подписываться и получить это значение (в иконке Корзины)
   
   addItem(addedGift: IGift) {
     const existingGift = this.gifts.find((gift) => gift.id === addedGift.id) //проверяем в массиве gifts есть ли этот только что добавленный товар
-    
     if (existingGift) { //если такой товар уже есть в массиве
       existingGift.quantity++ //кол-во товара увеличиваем
     } else {
@@ -49,13 +48,14 @@ export class CartService {
     }
   }
   
+  getTotal(): number {
+    return this.gifts.reduce((sum, item) => sum + (item.quantity * item.price), 0)
+  }
+  
   updateCart() {
     const totalCount = this.gifts.reduce((acc, gift) => acc + gift.quantity, 0); //находим общее кол-во всех товаров
     this.cartCountSubject.next(totalCount); //записываем актуальное общее кол-во в переменную (поток), чтобы отобразить в иконке
     this.cartItemsSubject.next([...this.gifts]); //записываем массив gifts в массив cartItemsSubject (поток), чтобы потом брать товары с актуальными quantity
-    console.log(this.cartCountSubject);
   }
-  
 
-  
 }

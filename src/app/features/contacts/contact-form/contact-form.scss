@@ -96,6 +96,7 @@
       border: none;
       cursor: pointer;
       transition: 0.3s;
+      transform: scale(1);
       
       @include _768-block {
         width: 60%;
@@ -104,6 +105,7 @@
       &:hover {
         background-color: var(--color-red);
       }
+      
     }
 }
 

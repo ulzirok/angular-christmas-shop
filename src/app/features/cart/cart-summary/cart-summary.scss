@@ -70,10 +70,22 @@
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    transform: scale(1);
   
-    &:hover {
-      background-color: var(--color-red);
-    }
+  }
+}
+
+.btn-valid {
+  background-color: var(--color-green);
+  
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.btn-invalid {
+  
+  &:hover {
+    background-color: var(--color-red);
   }
 }
 

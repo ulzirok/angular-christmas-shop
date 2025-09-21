@@ -6,23 +6,20 @@ import { FormsModule, NgForm } from '@angular/forms';
   selector: 'app-cart-summary',
   imports: [CurrencyPipe, FormsModule, CommonModule],
   templateUrl: './cart-summary.html',
-  styleUrl: './cart-summary.scss'
+  styleUrl: './cart-summary.scss',
 })
 export class CartSummary {
-  submitted: boolean = false
-  
-  @Input() total!: number
-  phone: string = ''
-  
-  @Output() submittedSuccess = new EventEmitter<void>();
+  submitted = false;
+  phone = '';
+  @Input() total!: number;
+  @Output() formSubmitted = new EventEmitter<void>();
 
-  onSubmit(form: NgForm) {
+  submitForm(form: NgForm) {
     if (form.valid) {
-      this.submittedSuccess.emit();
-      
-      this.submitted = true
+      this.formSubmitted.emit();
+      this.submitted = true;
       this.phone = '';
-      form.resetForm()
+      form.resetForm();
     }
   }
- }
+}

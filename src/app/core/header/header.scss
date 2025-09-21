@@ -1,7 +1,6 @@
 @import 'mixins';
 
 .menu {
-  // outline: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,11 +10,11 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--color-dark-blue);
-  
+
   @include _768-block {
     font-size: 12px;
   }
-  
+
   &__logo {
     display: flex;
     justify-content: space-between;
@@ -23,33 +22,32 @@
     padding: 8px 20px;
     cursor: pointer;
     transition: 0.3s;
-    
+
     &:hover {
       color: var(--color-red);
-      }
-    
+    }
+
     img {
       margin-right: 8px;
     }
   }
-  
+
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   &__item {
     padding: 12px 20px;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
-    
+
     &:hover {
       color: var(--color-red);
       background-color: var(--color-red10);
       border-radius: 20px;
-      
     }
   }
 }
@@ -62,7 +60,6 @@ app-burger-menu {
   app-burger-menu {
     display: block;
   }
-
   .menu__list {
     display: none;
   }

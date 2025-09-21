@@ -1,34 +1,36 @@
-<form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)">
+<form #orderForm="ngForm" (ngSubmit)="submitForm(orderForm)">
   <div class="cart-summary">
     <p class="cart-summary__title">Your order</p>
-    <p class="cart-summary__total">Total: <span>{{total | currency}}</span></p>
+    <p class="cart-summary__total">
+      Total: <span>{{ total | currency }}</span>
+    </p>
     <p class="cart-summary__subtitle">place an order:</p>
-    <input 
-    [(ngModel)]="phone" 
-    required 
-    pattern="^\+?[0-9\s\-()]+$"
-    #phoneInput="ngModel" 
-    type="text" 
-    name="phone" 
-    class="cart-summary__input" 
-    placeholder="Your phone number">
-    
+    <input
+      [(ngModel)]="phone"
+      required
+      pattern="^\+?[0-9\s\-()]+$"
+      #phoneInput="ngModel"
+      type="text"
+      name="phone"
+      class="cart-summary__input"
+      placeholder="Your phone number"
+    />
     @if (orderForm.submitted && phoneInput.invalid) {
       <div class="error">
         @if (phoneInput.errors?.['required']) {
-          <span>
-            Enter your phone number!
-          </span>
+          <span> Enter your phone number! </span>
         }
         @if (phoneInput.errors?.['pattern']) {
-          <span>
-            Enter a valid phone number!
-          </span>
-        } 
+          <span> Enter a valid phone number! </span>
+        }
       </div>
     }
-    
-    <button [ngClass]="{'btn-valid': orderForm.valid, 'btn-invalid': orderForm.invalid}" type="submit" class="cart-summary__btn">order</button>
+    <button
+      [ngClass]="{ 'btn-valid': orderForm.valid, 'btn-invalid': orderForm.invalid }"
+      type="submit"
+      class="cart-summary__btn"
+    >
+      order
+    </button>
   </div>
-  
 </form>

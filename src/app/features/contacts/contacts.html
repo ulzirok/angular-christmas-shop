@@ -6,9 +6,7 @@
     <div class="container">
       <div class="contacts__inner">
         <h1 class="contacts__title">Write to us</h1>
-        
-        <app-contact-form (submittedSuccess)="onFormSubmitted()"></app-contact-form>
-        
+        <app-contact-form (formSubmitted)="onFormSubmitted()"></app-contact-form>
         <div class="contacts__bottom">
           <div class="contacts__info">
             <h1 class="contacts__subtitle">Contact us</h1>
@@ -24,7 +22,6 @@
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        
       </div>
     </div>
   </div>

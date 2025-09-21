@@ -1,26 +1,24 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IGift } from '../../models/gift-model';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-gift-card',
   imports: [CommonModule],
   templateUrl: './gift-card.html',
-  styleUrl: './gift-card.scss'
+  styleUrl: './gift-card.scss',
 })
+  
 export class GiftCard {
-  @Input() showButtons: boolean = true
-  
-  @Input() gift?: IGift; //Получили объект gift от родителя и сохранили в переменную gift
-  
-  @Output() select = new EventEmitter<IGift>();  //Через @Output(передает польз.событие дочки родителю) создаем св-во select, его значение - экз класса EventEmitter
-  @Output() addToCart = new EventEmitter<IGift>()
-  
-  selected() {
-    this.select.emit(this.gift); //при клике передаем полученный объект gift родителю через метод emit ('эмитим объект)
+  @Input() showButtons = true;
+  @Input() gift?: IGift; 
+  @Output() detailsViewed = new EventEmitter<IGift>(); 
+  @Output() addedToCart = new EventEmitter<IGift>();
+
+  viewDetails() {
+    this.detailsViewed.emit(this.gift); 
   }
-  
-  addedToCart() {
-    this.addToCart.emit(this.gift)
+
+  addToCart() {
+    this.addedToCart.emit(this.gift);
   }
 }

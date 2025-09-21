@@ -8,9 +8,8 @@ describe('CategorySwitcher', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CategorySwitcher]
-    })
-    .compileComponents();
+      imports: [CategorySwitcher],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CategorySwitcher);
     component = fixture.componentInstance;

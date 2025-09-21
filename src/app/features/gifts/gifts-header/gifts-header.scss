@@ -25,11 +25,9 @@
     line-height: 1.5;
     text-transform: uppercase;
     margin: 12px 0;
-    
+
     @include _420-block {
       font-size: 30px;
     }
   }
-
-
 }

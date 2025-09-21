@@ -1,10 +1,10 @@
-<div (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu__btn">
+<button (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu__btn">
   <span></span>
   <span></span>
   <span></span>
-</div>
+</button>
 
-<div (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu">
+<div role="button" tabindex="0" (click)="toggleMenu()" [class.active]="isMenuOpen" class="burger-menu">
   <ul class="burger-menu__list">
     <li class="burger-menu__item"><a routerLink="">Home</a></li>
     <li class="burger-menu__item"><a routerLink="about">About</a></li>

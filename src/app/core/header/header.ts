@@ -6,8 +6,6 @@ import { BurgerMenu } from '../../shared/burger-menu/burger-menu';
   selector: 'app-header',
   imports: [RouterLink, BurgerMenu],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
-export class Header {
-
-}
+export class Header {}

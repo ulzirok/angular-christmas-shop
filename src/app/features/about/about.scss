@@ -27,7 +27,6 @@
 
   &__inner {
     width: 100%;
-    // outline: 1px solid red;
   }
 
   &__title {
@@ -48,12 +47,12 @@
     letter-spacing: 1.2px;
     line-height: 1;
     margin-bottom: 20px;
-    
+
     @include _768-block {
       font-size: 20px;
     }
   }
-  
+
   &__text {
     text-align: start;
     font-family: Allura, sans-serif;
@@ -62,7 +61,7 @@
     font-weight: 400;
     letter-spacing: 1.2px;
     line-height: 1;
-    
+
     @include _768-block {
       font-size: 14px;
     }
@@ -75,13 +74,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    
+
     @include _768-block {
       gap: 20px;
     }
   }
-  
-  &__first, &__second {
+
+  &__first,
+  &__second {
     width: 100%;
     height: auto;
     display: flex;
@@ -89,32 +89,32 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0 60px;
-    
+
     @include _768-block {
       gap: 20px;
     }
   }
-  
+
   &__wrapper {
     width: 50%;
     background-color: var(--color-white);
     border-radius: 20px;
     padding: 32px 50px;
-    
+
     @include _768-block {
       padding: 20px 30px;
     }
-    
+
     @include _420-block {
       width: 90%;
     }
   }
-  
+
   &__img {
     display: block;
     width: 25%;
     border-radius: 20px;
-    
+
     @include _420-block {
       display: none;
     }

@@ -20,7 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     @include _576-block {
       padding: 90px 0;
     }
@@ -71,7 +71,7 @@
       color: var(--color-dark-blue);
     }
   }
-  
+
   &__container {
     font-size: 16px;
     text-transform: uppercase;
@@ -87,4 +87,3 @@
     background-color: var(--color-light-gray);
   }
 }
-

@@ -6,7 +6,7 @@
   text-align: center;
   background-color: var(--color-white);
   padding: 60px 82px;
-  
+
   @include _1200-block {
     padding: 60px 8px;
   }
@@ -17,13 +17,12 @@
     justify-content: space-between;
     gap: 12px;
     padding-bottom: 60px;
-    
+
     @include _768-block {
       flex-wrap: wrap;
     }
-    
   }
-  
+
   &__card {
     font-size: 24px;
     letter-spacing: 3.84px;
@@ -39,35 +38,35 @@
     justify-content: center;
     align-items: center;
     gap: 12px 0;
-    
+
     @include _768-block {
       width: 100%;
     }
   }
-  
+
   &__number {
     transition: 0.3s;
-    
+
     &:hover {
       color: var(--color-red);
     }
   }
-  
+
   &__email {
     transition: 0.3s;
-    
+
     &:hover {
       color: var(--color-red);
     }
   }
-  
+
   &__text {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1.28px;
     line-height: 1.52;
   }
-  
+
   &__soc1als {
     width: 196px;
     height: 40px;
@@ -76,24 +75,24 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   &__bottom {
     display: flex;
     flex-direction: column;
     gap: 12px 0;
   }
-  
+
   &__copy {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.48;
     letter-spacing: 0;
-    
+
     @include _420-block {
       font-size: 14px;
     }
   }
-  
+
   &__made {
     font-family: Allura, sans-serif;
     font-size: 24px;
@@ -101,11 +100,11 @@
     line-height: 1;
     letter-spacing: 1.2px;
     transition: 0.3s;
-    
+
     @include _420-block {
       font-size: 20px;
     }
-    
+
     &:hover {
       color: var(--color-red);
     }

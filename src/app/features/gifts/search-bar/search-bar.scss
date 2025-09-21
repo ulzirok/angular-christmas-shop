@@ -2,14 +2,14 @@
 
 .search-bar {
   background-color: var(--color-red);
-  
+
   &__inner {
     width: 100%;
     padding: 0 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
     @include _576-block {
       justify-content: center;
     }
@@ -21,15 +21,15 @@
     border-radius: 17px;
     padding: 8px 10px;
     outline: none;
-    
+
     @include _576-block {
       width: 100%;
     }
-    
+
     &-wrapper {
       position: relative;
     }
-    
+
     &-icon {
       color: var(--color-white);
       position: absolute;
@@ -37,7 +37,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    
+
     &:focus {
       color: var(--color-white);
       border: 1px solid var(--color-white);
@@ -51,5 +51,3 @@
     }
   }
 }
-
-

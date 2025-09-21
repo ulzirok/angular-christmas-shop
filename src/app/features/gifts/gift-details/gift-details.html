@@ -1,21 +1,42 @@
-<div [class.active]="gift" class="gift-details__bg"> <!-- если true добавляем класс active (это можно также писать через *ngIf, [ngClass] или [hidden]) -->
+<div [class.active]="gift" class="gift-details__bg">
   <div class="gift-details__container">
     <div class="gift-details__modal">
-      <button (click)="closed()" class="gift-details__btn"> <!-- слушаем событие(click), при клике вызовем метод closed() -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-castom">
-          <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2" stroke-linecap="round" />
-          <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2" stroke-linecap="round" />
+      <button (click)="closeModal()" class="gift-details__btn">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="svg-castom"
+        >
+          <line
+            x1="18"
+            y1="6"
+            x2="6"
+            y2="18"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
         </svg>
       </button>
-      
-      
       <div class="gift-details__top">
-        <img [src]="gift?.image" [alt]="gift?.name" class="gift-details__img">
+        <img [src]="gift?.image" [alt]="gift?.name" class="gift-details__img" />
       </div>
       <div class="gift-details__bottom">
-        <p [ngClass]="gift?.categoryName" class="gift-details__category">{{gift?.category}}</p>
-        <p class="gift-details__name">{{gift?.name}}</p>
-        <p class="gift-details__description">{{gift?.description}}</p>
+        <p [ngClass]="gift?.categoryName" class="gift-details__category">{{ gift?.category }}</p>
+        <p class="gift-details__name">{{ gift?.name }}</p>
+        <p class="gift-details__description">{{ gift?.description }}</p>
         <p class="gift-details__superpowers">Adds superpowers to:</p>
         <div class="gift-details__superpower-container">
           <div class="gift-details__superpower gift-details__superpower-name">
@@ -25,28 +46,24 @@
             <p>Dream</p>
           </div>
           <div class="gift-details__superpower gift-details__superpower-number">
-            <p>{{gift?.superpowers?.live}}</p>
-            <p>{{gift?.superpowers?.create}}</p>
-            <p>{{gift?.superpowers?.love}}</p>
-            <p>{{gift?.superpowers?.dream}}</p>
+            <p>{{ gift?.superpowers?.live }}</p>
+            <p>{{ gift?.superpowers?.create }}</p>
+            <p>{{ gift?.superpowers?.love }}</p>
+            <p>{{ gift?.superpowers?.dream }}</p>
           </div>
         </div>
-        
         <div class="gift-details__buttons-cart">
-          
           <div class="gift-details__buttons-count">
-            <button (click)="onDecrease()" class="gift-details__btn-count">-</button>
-            <span class="gift-details__count">{{quantity}}</span>
-            <button (click)="onIncrease()" class="gift-details__btn-count">+</button>
+            <button (click)="decreaseQuantity()" class="gift-details__btn-count">-</button>
+            <span class="gift-details__count">{{ quantity }}</span>
+            <button (click)="increaseQuantity()" class="gift-details__btn-count">+</button>
           </div>
-           
-          <button *ngIf="quantity === 0" (click)="onAddToCart()" class="gift-details__btn-cart">
+          <button *ngIf="quantity === 0" (click)="addToCart()" class="gift-details__btn-cart">
             Add to cart
           </button>
           <button *ngIf="quantity > 0" routerLink="/cart" class="gift-details__btn-cart">
             Go to cart
           </button>
-          
         </div>
       </div>
     </div>

@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--color-red);
-  
 
   &__bg {
     width: 100%;
@@ -40,7 +39,7 @@
     text-transform: uppercase;
     margin: 12px 0;
   }
-  
+
   &__subtitle {
     font-family: Allura, sans-serif;
     color: var(--color-white);
@@ -49,7 +48,7 @@
     letter-spacing: 1.2px;
     line-height: 1;
     margin-bottom: 10px;
-  
+
     @include _768-block {
       font-size: 20px;
     }
@@ -60,7 +59,7 @@
       text-transform: uppercase;
     }
   }
-  
+
   &__bottom {
     border: 1px solid var(--color-white);
     border-radius: 20px;
@@ -72,11 +71,10 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-  
+
   &__form {
     margin-bottom: 20px;
   }
-  
 }
 
 iframe {

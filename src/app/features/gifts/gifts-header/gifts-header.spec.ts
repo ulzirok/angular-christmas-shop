@@ -8,9 +8,8 @@ describe('GiftsHeader', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GiftsHeader]
-    })
-    .compileComponents();
+      imports: [GiftsHeader],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GiftsHeader);
     component = fixture.componentInstance;

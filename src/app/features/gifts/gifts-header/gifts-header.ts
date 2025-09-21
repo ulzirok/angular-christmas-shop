@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-gifts-header',
   imports: [],
   templateUrl: './gifts-header.html',
-  styleUrl: './gifts-header.scss'
+  styleUrl: './gifts-header.scss',
 })
-export class GiftsHeader {
-
-}
+export class GiftsHeader {}

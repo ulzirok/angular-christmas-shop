@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CategorySwitcher } from './category-switcher/category-switcher';
 import { GiftsList } from './gifts-list/gifts-list';
 import { GiftsHeader } from './gifts-header/gifts-header';
 import { ButtonUp } from '../../shared/button-up/button-up';
@@ -8,8 +7,6 @@ import { ButtonUp } from '../../shared/button-up/button-up';
   selector: 'app-gifts',
   imports: [GiftsHeader, GiftsList, ButtonUp],
   templateUrl: './gifts.html',
-  styleUrl: './gifts.scss'
+  styleUrl: './gifts.scss',
 })
-export class Gifts {
- 
-}
+export class Gifts {}

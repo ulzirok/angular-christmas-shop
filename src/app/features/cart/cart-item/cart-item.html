@@ -1,27 +1,25 @@
 <div class="cart-item">
-  
   <div class="cart-item__right">
     <div class="cart-item__img-wrapper">
-      <img [src]="item.image" alt="" class="cart-item__img">
+      <img [src]="item.image" alt="" class="cart-item__img" />
     </div>
     <div class="cart-item__text">
-      <p class="cart-item__name">{{item.name}}</p>
-      <p [ngClass]="item.categoryName" class="cart-item__category">{{item.category}}</p>
+      <p class="cart-item__name">{{ item.name }}</p>
+      <p [ngClass]="item.categoryName" class="cart-item__category">{{ item.category }}</p>
     </div>
   </div>
-  
   <div class="cart-item__left">
-    <div class="cart-item__price"> Price:
-      <span> {{item.price | currency }} </span>
+    <div class="cart-item__price">
+      Price:
+      <span> {{ item.price | currency }} </span>
     </div>
     <div class="cart-item__subtotal">
-      <span> {{item.price * item.quantity | currency}} </span>
+      <span> {{ item.price * item.quantity | currency }} </span>
     </div>
-      <div class="cart-item__buttons">
-        <button (click)="onDecrease()" class="cart-item__btn">-</button>
-        <span class="cart-item__count">{{item.quantity}}</span>
-        <button (click)="onIncrease()" class="cart-item__btn">+</button>
-      </div>
+    <div class="cart-item__buttons">
+      <button (click)="decreaseQuantity()" class="cart-item__btn">-</button>
+      <span class="cart-item__count">{{ item.quantity }}</span>
+      <button (click)="increaseQuantity()" class="cart-item__btn">+</button>
+    </div>
   </div>
-  
 </div>

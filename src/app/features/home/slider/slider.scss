@@ -10,11 +10,11 @@
   background-size: cover;
   background-color: var(--color-red);
   padding: 60px 82px;
-  
+
   @include _768-block {
-      padding: 60px 8px;
-    }
-    
+    padding: 60px 8px;
+  }
+
   &__title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -22,22 +22,22 @@
     line-height: 1.52;
     letter-spacing: 3.84px;
     text-transform: uppercase;
-  } 
-  
+  }
+
   &__subtitle {
     font-family: Allura, sans-serif;
-      font-size: 24px;
-      font-weight: 400;
-      letter-spacing: 1.2px;
-      line-height: 1;
-      margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    margin-bottom: 12px;
   }
-  
+
   &__container {
     width: 100%;
     margin: 20px 0;
     overflow: hidden;
-    
+
     &-inner {
       position: relative;
       transition: 0.5s ease;
@@ -47,7 +47,7 @@
       justify-content: start;
       align-items: center;
     }
-    
+
     &-title {
       text-transform: uppercase;
       font-size: 80px;
@@ -56,21 +56,21 @@
       letter-spacing: 0;
       padding: 15px;
     }
-    
+
     &-img {
       width: 200px;
       height: 200px;
       border-radius: 20px;
     }
   }
-  
+
   &__buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 0 20px;
   }
-  
+
   &__btn {
     color: var(--color-light-gray);
     outline: none;
@@ -85,7 +85,7 @@
     align-items: center;
     cursor: pointer;
     transition: 0.3s;
-    
+
     &:hover {
       border: 1px solid var(--color-white);
       color: var(--color-white);

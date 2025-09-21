@@ -9,87 +9,84 @@
   position: fixed;
   top: 0;
   left: -100%;
-  // left: 0;
   height: 100vh;
   width: 100%;
-  transition: all .2s;
+  transition: all 0.2s;
   z-index: 1000;
-  
+
   &.active {
     left: 0;
   }
-  
+
   &__list {
     flex-direction: column;
-      padding: 30px;
-      height: 100%;
-      width: 60%;
-      background-color: var(--color-content-bg);
-      // overflow: auto;
-      
-      a {
-        display: block;
-          font-size: 16px;
-          line-height: 70px;
-      }
-  }
-  
-  &__item {
-      padding: 12px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-  
-    &:hover {
-        color: var(--color-red);
-        background-color: var(--color-red10);
-        border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    width: 60%;
+    background-color: var(--color-content-bg);
+
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 70px;
     }
   }
-  
-  
+
+  &__item {
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--color-red);
+      background-color: var(--color-red10);
+      border-radius: 20px;
+    }
+  }
+
   &__btn {
+    all: unset;
     width: 30px;
     height: 18px;
     position: relative;
     z-index: 2000;
     cursor: pointer;
     margin: 8px 20px;
-  
+
     span {
-    background-color: var(--color-dark-blue);
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: calc(50% - 1px);
-    left: 0;
-    transition: 0.2s;
-  
-    &:first-child {
-      top: 0;
+      background-color: var(--color-dark-blue);
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: calc(50% - 1px);
+      left: 0;
+      transition: 0.2s;
+
+      &:first-child {
+        top: 0;
       }
-  
-    &:last-child {
-      top: auto;
-      bottom: 0;
+
+      &:last-child {
+        top: auto;
+        bottom: 0;
       }
     }
-    
+
     &.active span {
       transform: scale(0);
     }
-    
+
     &.active span:first-child {
       transform: rotate(-45deg);
       top: calc(50% - 1px);
       background-color: var(--color-red);
     }
-    
+
     &.active span:last-child {
       transform: rotate(45deg);
       bottom: calc(50% - 1px);
       background-color: var(--color-red);
     }
   }
-  
 }

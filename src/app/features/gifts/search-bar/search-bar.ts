@@ -6,14 +6,14 @@ import { CartIcon } from '../../cart/cart-icon/cart-icon';
   selector: 'app-search-bar',
   imports: [FormsModule, CartIcon],
   templateUrl: './search-bar.html',
-  styleUrl: './search-bar.scss'
+  styleUrl: './search-bar.scss',
 })
 export class SearchBar {
-  searchTerm: string = '';
-  @Output() searchChange = new EventEmitter<string>()
-  
+  searchTerm = '';
+  @Output() valueChanged = new EventEmitter<string>();
+
   onInput(event: Event): void {
-    const inputValue = (event.target as HTMLInputElement).value
-    this.searchChange.emit(inputValue)
+    const inputValue = (event.target as HTMLInputElement).value;
+    this.valueChanged.emit(inputValue);
   }
 }

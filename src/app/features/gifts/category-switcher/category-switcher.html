@@ -1,6 +1,9 @@
 <div class="category-switcher">
   <ul class="category-switcher__list">
-    <li (click)="selectedCategory(category.key)" *ngFor="let category of categories | keyvalue" class="category-switcher__item">{{category.value}}</li>
+    <li *ngFor="let category of categories | keyvalue" class="category-switcher__item">
+      <button type="button" class="category-switcher__btn" (click)="selectCategory(category.key)">
+        {{ category.value }}
+      </button>
+    </li>
   </ul>
 </div>
-
